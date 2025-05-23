@@ -1,0 +1,5 @@
+path: dataset_T3-T6
+train: images/train
+val: images/val
+nc: 1
+names: ["catheter"]

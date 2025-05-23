@@ -1,4 +1,4 @@
-import h5py
+import h5py, cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -28,6 +28,8 @@ fig, ax = plt.subplots(1, 2, figsize=(6, 3))
 ax[0].imshow(data[0, ..., 0], cmap="gray")
 ax[0].set_title("Fluoro image")
 ax[1].imshow(lab[0, ..., 0], cmap="gray")
+cv2.imwrite(f"test_mask.png", lab[0, ..., 0])
+print(np.max(data[0, ..., 0]), np.min(lab[0, ..., 0]))
 ax[1].set_title("Segmentation mask")
 for a in ax:
     a.axis("off")
