@@ -1,4 +1,4 @@
-path: dataset_T3-T6
+path: dataset_Phantom
 train: images/train
 val: images/val
 nc: 1

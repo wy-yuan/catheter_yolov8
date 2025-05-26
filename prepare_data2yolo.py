@@ -11,7 +11,7 @@ def ensure_dirs(root: pathlib.Path):
         for sub in ("images", "masks", "labels"):
             (root / sub / split).mkdir(parents=True, exist_ok=True)
 
-def mask_to_poly(mask, max_points=8):
+def mask_to_poly(mask, max_points=30):
     """Return ≤max_points polygon vertices normalised to [0,1]."""
     contours = measure.find_contours(mask, 0.5)
     if not contours:          # empty mask – shouldn’t happen
