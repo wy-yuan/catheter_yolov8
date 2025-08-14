@@ -15,7 +15,7 @@ img_id = "00011"
 # MASK = "./dataset_Phantom/masks/train/train_{}.png".format(img_id)
 IMG = "./dataset_Phantom/images/val/val_{}.png".format(img_id)
 MASK = "./dataset_Phantom/masks/val/val_{}.png".format(img_id)
-MODEL = "./cathPhantom/cath_y8ns/weights/best.pt"
+MODEL = "./cathPhantom/cath_y11n_focal10dice10/weights/best.pt"
 IMG_SIZE = 256                     # use the same size you trained with
 OUT = os.path.join("./runs/segment/", "iou_{}.jpg".format(img_id))
 # -------------------------------------------------------------------
